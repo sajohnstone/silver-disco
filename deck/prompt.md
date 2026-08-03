@@ -28,6 +28,8 @@ Background / approach
 6. What I'm probably unable to give is
   1. Detailed understanding of trade-offs for Neo4J when modelling (I just don't lnow enough)
 7. Aim of presentation is to walk thorugh my appraoch to the problem
+8. we can include the repo https://github.com/sajohnstone/silver-disco
+
 
 
 AI Approach
