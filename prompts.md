@@ -32,30 +32,50 @@ data, not just the schema.
 I revieed the \1-problem-dataset-review\dataset_review_DRAFT.md.  update data/generate_dataset.py. run it, and outpit to data/transactions.csv
 ```
 
-**Status:** not yet run
+**Status:** run
 **Notes:**
 
 ---
 
-## Task 3 — Model proposal (draft)
+## Task 3c — Model proposal (draft)
 
 ```
 Using docs/neo4j_modelling_references.md and the finalised dataset review in
 1-problem-dataset-review/dataset_review.md, propose the graph model in
 2-solution/model_proposal_DRAFT.md per AGENTS.md. Include entities,
-relationships, transaction representation, assumptions, and at least one
+relationships, transaction representation, assumptions and trade-offs 
 rejected alternative. Stop after writing it and wait for my review.
 ```
 
-**Status:** not yet run
+**Status:** run
 **Notes:**
 
 ---
+
+## Task 3d — Dataset review
+
+```
+I've just noticed that nameOrig based on sample data should just be either Mxxxxx or Cxxxxx there was not external.  No M prefixed data has been generated.  update data/generate_dataset.py. run it, and outpit to data/transactions.csv
+
+```
+
+**Status:** run
+**Notes:**
+
+---
+
 
 ## Task 3b — Model + assumptions (finalise, after my review)
 
 ```
 I've reviewed 2-solution/model_proposal_DRAFT.md. Here are my decisions:
+1. DeviceId, ipAddress feel like they should be nodes to support questions like "Show me all the transactions for this IP or DeviceID".
+2. isFraud, isFlaggedFraud feels like they could be labels.  
+3. looking at the relationships this would only work if all transactions stayed in the same org.  I would assume this is a bank or similar so we should probably break out accounts into two nodes accounts and say customer and merchant?
+4. Agree with relationships for device and ip address (same as point 1)
+3. Reject the total flat model for reasons given
+
+
 [fill in — accept/reject/edit per assumption and model choice]. Write
 2-solution/model_notes.md and 2-solution/assumptions_tradeoffs.md reflecting
 these decisions, in my own reasoning, per AGENTS.md.
