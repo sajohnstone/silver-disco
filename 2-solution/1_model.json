@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "customer",
+      "position": { "x": 100, "y": 300 },
+      "caption": "Customer",
+      "labels": ["Customer"],
+      "properties": {
+        "customerId": "String",
+        "currentBalance": "Float",
+        "isActive": "Boolean",
+        "createdAt": "Integer"
+      },
+      "style": { "color": "#3B82F6", "fontSize": 14 }
+    },
+    {
+      "id": "merchant",
+      "position": { "x": 100, "y": 500 },
+      "caption": "Merchant",
+      "labels": ["Merchant"],
+      "properties": {
+        "merchantId": "String",
+        "currentBalance": "Float",
+        "isActive": "Boolean",
+        "category": "String"
+      },
+      "style": { "color": "#10B981", "fontSize": 14 }
+    },
+    {
+      "id": "transaction",
+      "position": { "x": 400, "y": 400 },
+      "caption": "Transaction",
+      "labels": ["Transaction", "IsFraud?", "IsFlaggedFraud?"],
+      "properties": {
+        "transactionId": "String",
+        "step": "Integer",
+        "type": "String",
+        "amount": "Float"
+      },
+      "style": { "color": "#F59E0B", "fontSize": 14 }
+    },
+    {
+      "id": "device",
+      "position": { "x": 700, "y": 300 },
+      "caption": "Device",
+      "labels": ["Device"],
+      "properties": {
+        "deviceId": "String",
+        "riskScore": "Float",
+        "firstSeen": "Integer",
+        "lastSeen": "Integer"
+      },
+      "style": { "color": "#EF4444", "fontSize": 14 }
+    },
+    {
+      "id": "ipaddress",
+      "position": { "x": 700, "y": 500 },
+      "caption": "IPAddress",
+      "labels": ["IPAddress"],
+      "properties": {
+        "ipAddress": "String",
+        "riskScore": "Float",
+        "firstSeen": "Integer",
+        "lastSeen": "Integer",
+        "geolocation": "String"
+      },
+      "style": { "color": "#8B5CF6", "fontSize": 14 }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "sent",
+      "fromId": "customer",
+      "toId": "transaction",
+      "type": "SENT",
+      "properties": {
+        "oldBalance": "Float",
+        "newBalance": "Float"
+      },
+      "style": { "color": "#3B82F6", "fontSize": 12 }
+    },
+    {
+      "id": "sent_merchant",
+      "fromId": "merchant",
+      "toId": "transaction",
+      "type": "SENT",
+      "properties": {
+        "oldBalance": "Float",
+        "newBalance": "Float"
+      },
+      "style": { "color": "#10B981", "fontSize": 12 }
+    },
+    {
+      "id": "received_by_customer",
+      "fromId": "transaction",
+      "toId": "customer",
+      "type": "RECEIVED_BY",
+      "properties": {
+        "oldBalance": "Float",
+        "newBalance": "Float"
+      },
+      "style": { "color": "#3B82F6", "fontSize": 12 }
+    },
+    {
+      "id": "received_by_merchant",
+      "fromId": "transaction",
+      "toId": "merchant",
+      "type": "RECEIVED_BY",
+      "properties": {
+        "oldBalance": "Float",
+        "newBalance": "Float"
+      },
+      "style": { "color": "#10B981", "fontSize": 12 }
+    },
+    {
+      "id": "used_device",
+      "fromId": "transaction",
+      "toId": "device",
+      "type": "USED_DEVICE",
+      "properties": {},
+      "style": { "color": "#EF4444", "fontSize": 12 }
+    },
+    {
+      "id": "from_ip",
+      "fromId": "transaction",
+      "toId": "ipaddress",
+      "type": "FROM_IP",
+      "properties": {},
+      "style": { "color": "#8B5CF6", "fontSize": 12 }
+    }
+  ],
+  "style": {
+    "background": "#F9FAFB",
+    "grid": { "size": 20, "color": "#E5E7EB" }
+  },
+  "meta": {
+    "title": "Fraud Detection Transaction Graph Model",
+    "description": "Transaction-as-node model with separate Customer/Merchant nodes and Device/IP entities",
+    "created": "2026-08-03"
+  }
+}

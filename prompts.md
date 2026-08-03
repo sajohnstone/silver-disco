@@ -95,7 +95,7 @@ look at the data/transactions.csv and create a document called
 
 ---
 
-## Task 4a — README.md
+## Task 4 — README.md
 
 ```
 Within the project write a readme.md about what it's for.  Tech used e.g openCode + Deepseek v3.2 + OpenRouter.  How to set this up for someone new.  
@@ -107,48 +107,60 @@ We can keep it brief we don't need how to exaplin how to install opencode etc.
 
 ---
 
-## Task 4 — Business questions + query sketches (draft)
+## Task 4 — Problem & dataset review
 
 ```
-Using 2-solution/model_notes.md, draft 2-3 business questions this graph
-model should answer and a Cypher/traversal sketch for each, into
-3-queries/business_questions_DRAFT.md per AGENTS.md. Stop after writing it
-and wait for my review.
+using the model_proposal_V1.md and 2-solution/current_model_DRAFT.md
+ write  2-solution/1_problem_and_dataset_review.md
+show key entities, relationships, and any patterns/ambiguities identified in the data.
 ```
 
-**Status:** not yet run
+**Status:** run
 **Notes:**
 
 ---
 
-## Task 4b — Business questions (finalise, after my review)
+## Task 5 — Problem & dataset review
 
 ```
-I've reviewed 3-queries/business_questions_DRAFT.md. Here are my decisions:
-[fill in]. Write the finalised version to 3-queries/business_questions.md
-per AGENTS.md.
+using the model_proposal_V1.md write two files
+ - 2-solution/1_model.json - in https://arrows.app/ format based on the model_proposal_V1.md 
+ - 2-solution/1_data model.md  - data model (entities, relationships, transaction
+   representation)
+ - compare models 2-solution/1_model_proposal_V1.md (proposed) 2-solution/model_proposal_DRAFT.md (alternative) explain why proposed approach selected and why alternative and rejected.  Show pros / cons / trade-off for each descision
 ```
 
-**Status:** not yet run
+**Status:** run
 **Notes:**
 
 ---
 
-## Task 5 — README (pull it together)
+
+## Task 5 — Problem & dataset review
 
 ```
-Using the finalised files in 1-problem-dataset-review/, 2-solution/, and
-3-queries/, write README.md presenting the three sections in order
-(Problem & dataset review, Solution, Queries) per AGENTS.md, ready for me to
-lift into slides.
-```
+SyntaxError: Unexpected token '去', ..." 100, "y":去除300 },
+ "... is not valid JSON
+ ```
 
-**Status:** not yet run
+**Status:** run
 **Notes:**
 
 ---
 
-## Ad hoc / troubleshooting prompts
 
-Log anything off-script here — corrections, re-runs, or one-off asks that
-didn't fit the plan above.
+## Task 6 — queries
+
+```
+using the model_proposal_V1.md write to 2-solution/1_business_questions.md
+provide 3 business questions
+each with 
+ - show decrption
+ - associated query
+ - traversal sketch.
+```
+
+**Status:** run
+**Notes:**
+
+---
