@@ -1,5 +1,9 @@
 I need a presentation deck to show the following
 
+style: simple / professional
+use: present to 2 technical stakeholders as part of an interview process
+color / font: use neo4j styling 
+
 
 1. **Problem & dataset review** — key entities, relationships, and any
    patterns/ambiguities identified in the data.
@@ -33,3 +37,4 @@ AI Approach
 4. Generated model_proposal_DRAFT manually reviewed.
     1. first itteration had fraud / ip details in transaction which didn't *feel* right so did my own reasearch which.....
 
+We also need a conclustion / thanks slide at the end
