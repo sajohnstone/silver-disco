@@ -65,7 +65,7 @@ I've just noticed that nameOrig based on sample data should just be either Mxxxx
 ---
 
 
-## Task 3b — Model + assumptions (finalise, after my review)
+## Task 3e — Model + assumptions (finalise, after my review)
 
 ```
 I've reviewed 2-solution/model_proposal_DRAFT.md. Here are my decisions:
@@ -75,6 +75,31 @@ I've reviewed 2-solution/model_proposal_DRAFT.md. Here are my decisions:
 4. Agree with relationships for device and ip address (same as point 1)
 3. Reject the total flat model for reasons given remove the alternative section
 write to 2-solution/model_proposal_V1.md
+```
+
+**Status:** run
+**Notes:**
+
+---
+
+
+## Task 3f — data catalog
+
+```
+look at the data/transactions.csv and create a document called
+2-solution/current_model_DRAFT.md we just need to include an intro and a list of the fields + or assumption of what they mean
+```
+
+**Status:** run
+**Notes:**
+
+---
+
+## Task 4a — README.md
+
+```
+Within the project write a readme.md about what it's for.  Tech used e.g openCode + Deepseek v3.2 + OpenRouter.  How to set this up for someone new.  
+We can keep it brief we don't need how to exaplin how to install opencode etc.
 ```
 
 **Status:** run
